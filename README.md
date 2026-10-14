@@ -4,7 +4,7 @@ A binary classifier for Urdu social-media posts: **sarcastic (1)** vs **non-sarc
 The project compares a classical TF-IDF model, two neural networks, a fine-tuned multilingual transformer and an ensemble of the three families,
 with Urdu-specific preprocessing and features, an ablation study, statistical significance tests and an error analysis.
 
-The notebook [`26K_7601_Urdu_Sarcasm_Detection.ipynb`](26K_7601_Urdu_Sarcasm_Detection.ipynb) is the full report: every number below comes from its outputs.
+The notebook [`UrduSarcasmDetection.ipynb`](https://github.com/ummeabiha/UrduSarcasmDetection/blob/main/UrduSarcasmDetection.ipynb) is the full report: every number below comes from its outputs.
 
 <img width="4177" height="2031" alt="architecture" src="https://github.com/user-attachments/assets/4f3d8ff4-0abe-46f1-ad30-fea2a7b87923" />
 
