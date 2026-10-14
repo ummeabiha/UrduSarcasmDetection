@@ -1,0 +1,4 @@
+model,seed,best_epoch,val_macro_f1,collapsed
+xlm-roberta-large,42,3,0.8248086242609671,False
+xlm-roberta-large,43,2,0.8233082706766917,False
+xlm-roberta-large,44,4,0.8182428126864891,False

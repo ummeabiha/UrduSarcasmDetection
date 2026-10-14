@@ -1,0 +1,22 @@
+model_a,model_b,macro_f1_a,macro_f1_b,only_a_right,only_b_right,p,p_holm,"significant (Holm, 0.05)"
+XLM-R,B2 FastText-mean,0.8365,0.7594,181,76,0.0,0.0,True
+Ensemble,B2 FastText-mean,0.8329,0.7594,175,76,0.0,0.0,True
+LogReg,B2 FastText-mean,0.8088,0.7594,158,90,0.0,0.0004,True
+LinearSVC,B2 FastText-mean,0.802,0.7594,148,85,0.0,0.0008,True
+BiGRU+attention,B2 FastText-mean,0.807,0.7594,156,93,0.0001,0.0013,True
+CNN,XLM-R,0.7967,0.8365,66,116,0.0003,0.0041,True
+CNN,B2 FastText-mean,0.7967,0.7594,145,90,0.0004,0.0061,True
+BiGRU+attention,XLM-R,0.807,0.8365,51,93,0.0006,0.0082,True
+CNN,Ensemble,0.7967,0.8329,62,106,0.0009,0.0111,True
+LinearSVC,XLM-R,0.802,0.8365,58,100,0.001,0.0125,True
+BiGRU+attention,Ensemble,0.807,0.8329,40,76,0.0011,0.0125,True
+LogReg,XLM-R,0.8088,0.8365,52,89,0.0023,0.0231,True
+LinearSVC,Ensemble,0.802,0.8329,53,89,0.0032,0.0285,True
+LogReg,Ensemble,0.8088,0.8329,44,75,0.0057,0.0458,True
+LogReg,CNN,0.8088,0.7967,89,76,0.3502,1.0,False
+XLM-R,Ensemble,0.8365,0.8329,23,17,0.4296,1.0,False
+BiGRU+attention,CNN,0.807,0.7967,74,66,0.5543,1.0,False
+LinearSVC,CNN,0.802,0.7967,83,75,0.5777,1.0,False
+LogReg,LinearSVC,0.8088,0.802,31,26,0.5966,1.0,False
+LogReg,BiGRU+attention,0.8088,0.807,77,72,0.7433,1.0,False
+LinearSVC,BiGRU+attention,0.802,0.807,84,84,1.0,1.0,False

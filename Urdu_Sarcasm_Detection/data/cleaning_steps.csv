@@ -1,0 +1,7 @@
+step,rows
+raw rows,20004
+after dropping missing post / invalid label,19955
+after Unicode cleaning (empty posts dropped),19955
+after removing conflicting-label posts,17824
+after exact de-duplication (unique posts),14567
+training split after near-duplicate purge,11201

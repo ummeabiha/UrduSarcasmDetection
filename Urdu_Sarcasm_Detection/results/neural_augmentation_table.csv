@@ -1,0 +1,5 @@
+model,augmentation,val_macro_f1 (3 seeds averaged)
+BiGRU+attention,False,0.8049
+CNN,False,0.7991
+BiGRU+attention,True,0.817
+CNN,True,0.8085

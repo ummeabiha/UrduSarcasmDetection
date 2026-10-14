@@ -1,0 +1,12 @@
+cue removed,val_macro_f1,delta_vs_base,mcnemar_p
+emoji,0.8078,-0.0006,1.0
+exclaim,0.8083,0.0,1.0
+question,0.8083,0.0,1.0
+ellipsis,0.8075,-0.0008,1.0
+char_runs,0.8083,0.0,1.0
+latin_ratio,0.8083,0.0,1.0
+quoted_words,0.8083,0.0,1.0
+url,0.8084,0.0001,1.0
+mention,0.8101,0.0018,0.7539
+hashtag,0.8088,0.0005,1.0
+log_words,0.8044,-0.004,0.3915

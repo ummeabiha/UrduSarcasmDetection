@@ -1,0 +1,7 @@
+,val_macro_f1,gain_vs_tfidf
+TF-IDF only,0.7961,0.0
++ cues,0.7952,-0.0009
++ phrases,0.7951,-0.001
++ lexicon,0.7983,0.0022
++ phrases + cues (final setup),0.7973,0.0012
++ phrases + cues + lexicon,0.7959,-0.0002

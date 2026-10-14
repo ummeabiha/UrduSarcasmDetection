@@ -1,0 +1,15 @@
+{
+  "members": [
+    "LogReg",
+    "BiGRU+attention",
+    "XLM-R"
+  ],
+  "weights": {
+    "LogReg": 0.3,
+    "BiGRU+attention": 0.2,
+    "XLM-R": 0.5
+  },
+  "threshold": 0.46,
+  "final_model": "Ensemble",
+  "best_single_model": "XLM-R"
+}

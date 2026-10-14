@@ -1,0 +1,7 @@
+,val_macro_f1,threshold
+Ensemble,0.8404,0.46
+XLM-R,0.8312,0.5
+BiGRU+attention,0.8114,0.5
+LogReg,0.8083,0.5
+LinearSVC,0.8083,0.5
+CNN,0.8056,0.5

@@ -1,0 +1,16 @@
+group,variant,val_macro_f1,mcnemar_p_vs_base,delta_vs_base
+base,base (final setup),0.8083,1.0,0.0
+preprocessing,preprocessing: raw,0.81,0.7905,0.0017
+preprocessing,preprocessing: light,0.8084,1.0,0.0001
+emojis,emojis removed,0.8028,0.3817,-0.0055
+hashtags,hashtags removed,0.8038,0.2559,-0.0045
+punctuation,punctuation removed,0.8127,0.2863,0.0044
+repetition,repetition collapsed (3+ runs -> 1),0.8095,0.8318,0.0012
+code-mixing,Latin-script tokens removed (all),0.8097,0.6875,0.0014
+code-mixing,Roman-Urdu tokens removed (seed list),0.8091,1.0,0.0008
+code-mixing,other Latin tokens removed (mostly English),0.8097,0.6875,0.0014
+features,word n-grams only,0.8072,0.9152,-0.0011
+features,char n-grams only,0.8039,0.4101,-0.0044
+engineered,no phrase or cue features,0.8098,1.0,0.0015
+engineered,+ Urdu marker lexicon,0.8105,0.6072,0.0022
+augmentation,augmentation = True,0.809,1.0,0.0007

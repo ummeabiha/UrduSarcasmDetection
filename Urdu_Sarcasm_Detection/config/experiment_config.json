@@ -1,0 +1,73 @@
+{
+  "seed": 42,
+  "data_file": "urdu_sarcastic_dataset.xlsx",
+  "purge_near_duplicates": true,
+  "split_sizes": {
+    "train": 11201,
+    "val": 1457,
+    "test": 1457
+  },
+  "label_map": {
+    "0": "non-sarcastic",
+    "1": "sarcastic"
+  },
+  "preprocessing_mode": "full",
+  "classical_augmentation": false,
+  "logreg": {
+    "C": 1,
+    "class_weight": "balanced"
+  },
+  "svm": {
+    "C": 0.1,
+    "class_weight": "balanced"
+  },
+  "best_classical": "LogReg",
+  "neural": {
+    "max_len": 60,
+    "emb_dim": 100,
+    "hidden": 128,
+    "dropout": 0.3,
+    "lr": 0.001,
+    "batch": 64,
+    "max_epochs": 15,
+    "patience": 3,
+    "seeds": [
+      42,
+      43,
+      44
+    ],
+    "augmentation": true,
+    "best": "BiGRU+attention"
+  },
+  "xlmr": {
+    "models": [
+      "xlm-roberta-large",
+      "xlm-roberta-base"
+    ],
+    "seeds": [
+      42,
+      43,
+      44,
+      45
+    ],
+    "n_good_runs": 3,
+    "max_len": 128,
+    "batch": 16,
+    "lr": 1e-05,
+    "weight_decay": 0.01,
+    "warmup": 0.1,
+    "max_epochs": 5,
+    "patience": 2,
+    "available": true
+  },
+  "ensemble": {
+    "weights": {
+      "LogReg": 0.3,
+      "BiGRU+attention": 0.2,
+      "XLM-R": 0.5
+    },
+    "threshold": 0.46
+  },
+  "final_model": "Ensemble",
+  "best_single_model": "XLM-R"
+}

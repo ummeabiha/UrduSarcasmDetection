@@ -1,0 +1,9 @@
+slice,n,share_sarcastic,Ensemble acc,Ensemble macro-F1,XLM-R acc,XLM-R macro-F1
+short (1-5 words),172,0.081,0.919,0.66,0.924,0.67
+medium (6-20),748,0.338,0.826,0.804,0.828,0.805
+long (>20),537,0.603,0.827,0.809,0.834,0.82
+emoji present,1142,0.327,0.827,0.807,0.832,0.81
+Latin code-mixing,244,0.717,0.865,0.817,0.861,0.814
+URL or hashtag,103,0.951,0.951,0.488,0.951,0.488
+#sarcasm / #طنز tag,65,0.985,0.985,0.496,0.985,0.496
+without that tag,1392,0.379,0.83,0.822,0.835,0.826
