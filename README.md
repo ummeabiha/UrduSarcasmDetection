@@ -92,7 +92,7 @@ Emojis, punctuation, repetition, hashtags and code-mixed words are **kept** and 
 **Data augmentation:** each training post gets one typo-style copy (letter elongation, adjacent-letter swap or dropped letter), +10,426 copies.
 It is used by a model family only if it improves validation macro-F1: it helped the neural networks, not the classical models, and XLM-R is trained on original posts only.
 
-### 3. Feature engineering (bonus: Urdu-specific features)
+### 3. Feature engineering 
 
 1. **TF-IDF word 1–2-grams**, with a tokenizer that keeps each emoji, `!` and `?` as its own token.
 2. **TF-IDF character 2–5-grams**, robust to spelling variation in Urdu and Roman Urdu.
@@ -144,11 +144,11 @@ Each variant changes one choice of the Logistic Regression setup and is compared
 | Augmentation on | 0.8090 | +0.0007 | 1.00 |
 
 None of the 14 variants, the 11 single-cue removals or the 9 phrase-mining settings is significant (every p ≥ 0.25, every Δ < 0.006).
-The full tables are in `results/ablation_validation.csv`, `results/ablation_cue_by_cue.csv` and `results/phrase_mining_sweep.csv`.
+The full tables are in [results/ablation_validation.csv](Urdu_Sarcasm_Detection/results/ablation_validation.csv), [results/ablation_cue_by_cue.csv](Urdu_Sarcasm_Detection/results/ablation_cue_by_cue.csv) and [results/phrase_mining_sweep.csv](Urdu_Sarcasm_Detection/results/phrase_mining_sweep.csv).
 
 ## Further evaluation
 
-- **Statistical tests:** pairwise exact McNemar tests for all 21 model pairs, Holm-corrected (`results/pairwise_mcnemar_test.csv`).
+- **Statistical tests:** pairwise exact McNemar tests for all 21 model pairs, Holm-corrected [results/pairwise_mcnemar_test.csv`](Urdu_Sarcasm_Detection/results/pairwise_mcnemar_test.csv).
 - **Calibration:** Ensemble Brier score 0.117, ECE 0.027 (base-rate reference 0.241).
 - **Robustness:** one typo changes only 1.4–3.8% of predictions.
 - **Test slices:** short posts (1–5 words) are the hardest (Ensemble macro-F1 0.660). On posts without the `#sarcasm`/`#طنز` tag, the Ensemble reaches 0.822 and XLM-R 0.826.
@@ -202,7 +202,7 @@ The XLM-R model weights (approximately 3.4 GB) and trained neural models are too
 - All randomness is seeded (seed 42; seeds 42–44 for the averaged runs).
 
 **Main package versions:** Python 3.13, NumPy 2.1.3, pandas 2.2.3, SciPy 1.16.3, scikit-learn 1.6.1, PyTorch 2.11.0, Transformers 5.18.0, gensim 4.4.0, matplotlib 3.10.0.
-The exact versions are recorded in `config/package_versions.json`.
+The exact versions are recorded in [config/package_versions.json](Urdu_Sarcasm_Detection/config/package_versions.json).
 
 ### Predicting new posts
 
