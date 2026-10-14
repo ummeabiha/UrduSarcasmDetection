@@ -1,0 +1,17 @@
+{
+  "mode": "full",
+  "use_aug": true,
+  "max_len": 60,
+  "emb_dim": 100,
+  "hidden": 128,
+  "dropout": 0.3,
+  "lr": 0.001,
+  "batch": 64,
+  "max_epochs": 15,
+  "patience": 3,
+  "seeds": [
+    42,
+    43,
+    44
+  ]
+}
