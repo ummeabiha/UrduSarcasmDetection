@@ -50,7 +50,7 @@ Held-out test set: 1,457 posts. Primary metric: **macro-F1** (the cleaned data i
 | **True non-sarcastic** (866) | 729 | 137 |
 | **True sarcastic** (591) | 100 | 491 |
 
-Confusion matrices for every model are in [`figures/confusion_matrices_test.png`](figures/confusion_matrices_test.png).
+Confusion matrices for every model are in [`figures/confusion_matrices_test.png`](Urdu_Sarcasm_Detection/figures/confusion_matrices_test.png).
 
 ---
 
@@ -178,7 +178,7 @@ The main error sources:
 ## Repository structure
 
 ```
-├── 26K_7601_Urdu_Sarcasm_Detection.ipynb   notebook with all code, outputs and discussion (the report)
+├── UrduSarcasmDetection.ipynb              notebook with all code, outputs and discussion (the report)
 ├── architecture.png                        pipeline diagram
 ├── results/                                predictions, metrics, ablation, significance and slice tables (CSV/JSON)
 ├── figures/                                all plots (EDA, training curves, confusion matrices, calibration)
@@ -187,14 +187,15 @@ The main error sources:
 └── neural/                                 BiGRU and CNN weights, vocabulary, config
 ```
 
-The XLM-R weights (about 3.4 GB) are too large for GitHub and are shared separately (see below).
+The XLM-R model weights (approximately 3.4 GB) and trained neural models are too large to include in the GitHub repository. They are available separately via Google Drive.
 
-## How to reproduce
+## How to Reproduce
 
 1. Open the notebook in **Google Colab**.
-2. Optional: to skip retraining, copy this repository's `classical/`, `neural/`, `results/` and `config/` folders, and the XLM-R weights from
-   [Google Drive](https://drive.google.com/drive/folders/1po-lXi723uMiPew3uEl62Au5VOwM9zQ5?usp=drive_link) (into `transformer/`), under `MyDrive/Urdu_Sarcasm_Detection/`.
-3. Keep `RESUME = True` and choose **Runtime → Run all**. The notebook mounts Drive and installs its extra packages itself.
+2. To skip retraining, copy the repository's `classical/`, `neural/`, `results/`, and `config/` folders, along with the separately hosted model files, into the following Google Drive directory: `MyDrive/Urdu_Sarcasm_Detection/`.
+   - **XLM-R weights:** [Google Drive folder](https://drive.google.com/drive/folders/1po-lXi723uMiPew3uEl62Au5VOwM9zQ5?usp=drive_link). Place the downloaded files in `transformer/`.
+   - **Trained neural models:** [Google Drive file](https://drive.google.com/file/d/1nyyMI4oOKhe5C0TcWBaZVBBHdo4NqKik/view?usp=sharing). Place the downloaded files in `neural/`.
+3. Set `RESUME = True` and select **Runtime → Run all** in Google Colab. The notebook mounts Google Drive and installs the required additional packages automatically.
 
 - With the saved models, everything runs on a CPU in a few minutes.
 - Training from scratch: the classical and neural models train on a CPU, but **fine-tuning XLM-R needs a GPU**. Without a GPU and without saved runs, XLM-R is skipped.
@@ -211,4 +212,13 @@ After running the notebook, `predict_sarcasm` reloads the saved models and class
 predict_sarcasm(['واہ کیا بات ہے، بجلی پھر چلی گئی 👏👏 شاباش حکومت'])                        # final model (Ensemble)
 predict_sarcasm(['واہ کیا بات ہے، بجلی پھر چلی گئی 👏👏 شاباش حکومت'], model_name='XLM-R')    # a single model
 ```
+
+## Acknowledgements
+
+- **Pretrained model:** XLM-RoBERTa (Conneau et al., 2020), from the Hugging Face Hub.
+- **Methods:** FastText (Bojanowski et al., 2017); additive attention (Bahdanau et al., 2015); CNN sentence classification (Kim, 2014);
+  log-odds ratio for distinctive phrases (Monroe, Colaresi and Quinn, 2008); McNemar's test (1947); Holm correction (1979); Mann-Whitney U test (1947); Brier score (1950).
+- **Libraries:** pandas, NumPy, SciPy, scikit-learn, PyTorch, gensim, Hugging Face Transformers, matplotlib, arabic-reshaper, python-bidi, joblib.
+- **Font:** Noto Naskh Arabic (SIL Open Font License), for plot labels.
+- **AI assistance:** an AI assistant was used to review and improve the code and documentation, as acknowledged in the notebook.
 
